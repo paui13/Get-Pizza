@@ -12,7 +12,7 @@ module.exports = {
         tertiary:"#223c5F",
       },
       backgroundImage:{
-        
+        menu: " linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.6)),  url('../IMG/menubanner.jpg')",
       }
      
     },

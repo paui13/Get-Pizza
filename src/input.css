@@ -100,20 +100,28 @@
 }
 /* ABOUT BANNER */
 .aboutBanner{
-    @apply pt-36;
+    @apply pt-36
+   
+    /* DESKTOP */
+    ;
 }
 .aboutBanner iframe{
-    @apply w-[24rem] h-[19rem] pt-6 ;
+    @apply w-[24rem] h-[19rem] pt-6 
+  lg:w-[45rem] h-[30rem];
 }
+  
 .aboutBanner__text h1{
-    @apply text-primary font-bold text-5xl pt-10; 
+    @apply text-primary font-bold text-5xl pt-10 ; 
 
 }
 .aboutBanner__text p{
-    @apply pt-6;
+    @apply pt-6 lg:text-justify lg:max-w-[40rem]
+  
+    ;
 }
 .aboutBanner__wrapper{
-    @apply flex flex-col items-center justify-center;
+    @apply flex flex-col items-center justify-center
+    lg:flex-row lg:gap-12;
 }
 /* REVIEWS */
 .review{
@@ -124,15 +132,155 @@
 
 }
 .review__wrapper {
-    @apply flex flex-col text-center ; 
+    @apply flex flex-col text-center  ; 
 }
 .review__items{
     @apply  flex flex-col  justify-center items-center;
 }
+.review__items p{
+  @apply lg:max-w-[40rem] mx-auto;
+}
 .review__items img{
-    @apply w-[5rem] border border-transparent rounded-full 
+    @apply w-[5rem]  rounded-full mx-auto;
 }
+.tns-outer{
+  @apply max-w-[40rem] mx-auto;
 }
+
+/* OUR STORY */
+.story{
+  @apply py-10
+  lg:pt-[7rem]
+  ;
+  
+
+}
+.story__img img{
+  @apply hidden
+  lg:block lg:rounded-3xl ;
+
+}
+.story__wrapper{
+  @apply lg:flex lg:ml-[10rem] gap-[5rem]
+}
+.story h3{
+  @apply font-bold text-center text-4xl mb-5;
+}
+.story__content{
+  @apply text-justify lg:pt-[2rem];
+}
+.story__item{
+  @apply mb-5 max-w-[35rem] mx-auto;
+}
+.story__item h4, .story__item i{
+  @apply bg-primary text-white px-3 py-2 font-bold flex justify-between items-center cursor-pointer;
+}
+.story__item i.open{
+  @apply rotate-180 duration-700;
+}
+.story__item p{
+  @apply  bg-slate-50 h-auto max-h-0 overflow-hidden duration-300;
+}
+.story__item p.open{
+  @apply max-h-[50rem] bg-slate-50 p-3 duration-300;
+}
+
+
+/* MENU  */
+
+/* MENU BANNER */
+.menuBanner{
+  @apply bg-menu bg-cover bg-no-repeat h-screen pt-36 text-white font-semibold text-3xl  text-justify  items-center flex
+  /* DESKTOP */
+  
+  ;  
+}
+.menuBanner h1{
+  @apply justify-center ml-[7rem] pb-[8rem];
+}
+
+}
+/* tabs */
+.menuTab {
+  @apply pt-11 pb-16;
+} 
+.menuTab__choices {
+  @apply border border-transparent rounded-3xl
+  ;
+}
+
+.menuTab__choices ul {
+  @apply flex gap-3 text-tertiary font-semibold justify-center items-center py-[1rem] px-0
+  /* desktop */
+ 
+  ;
+}
+.menuTab__choices ul li a {
+  @apply cursor-pointer hover:text-primary;
+}
+.menuTab__choices ul li a.active {
+  @apply text-primary;
+}
+.menuTab__choices ul li span {
+  @apply  block bg-white h-7 w-[1px];
+}
+.menuTab__content {
+  @apply mt-5;
+}
+.menuTab__details {
+  @apply hidden;
+}
+.menuTab__details.active {
+  @apply grid grid-cols-3 gap-6 text-center block
+  lg:grid-cols-3 lg:gap-11 
+  ;
+}
+.menuTab__foods--text {
+  @apply flex flex-col justify-center items-center pt-5;
+}
+.menuTab__foods {
+  @apply text-white flex flex-col justify-center items-center
+ lg:border-white lg:rounded-2xl
+  ;
+}
+.menuTab__foods img {
+  @apply w-32;
+}
+/* CONTACT */
+.map{
+  @apply pt-[10rem] pb-12;
+}
+.map__wrapper iframe{
+  @apply h-[45rem] w-[25rem] justify-center ml-6
+  lg:ml-[15rem] lg:h-[30rem] lg:w-[70rem]
+  ;
+}
+.form__wrapper{
+  @apply flex justify-center flex-col items-center pt-16
+ 
+  ;
+}
+.form__wrapper h2{
+  @apply font-bold text-3xl mb-16;
+}
+.form__wrapper form{
+  @apply flex flex-col 
+  lg:w-[40rem]
+  ;
+}
+.form__wrapper form input{
+  @apply rounded-s-xl
+  
+  ;
+}
+.form__wrapper .name{
+  @apply mb-3
+  gap-[1rem] lg:flex
+}
+.form__wrapper .name input{
+  @apply lg:w-[24.4rem]
+}
+
 @layer components {
     /* header */
     .header {
@@ -258,4 +406,4 @@
     hover:border-secondary hover:bg-transparent;
   }
 }
-/* ABOUT BANNER */
+
